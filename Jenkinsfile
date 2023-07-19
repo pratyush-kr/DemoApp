@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        // stage('Installing git') {
-        //     steps {
-        //         sh 'apt install git'
-        //     }
-        // }
+        stage('Removing old') {
+            steps {
+                sh 'rm -rf DemoApp'
+            }
+        }
         stage('Checkout') {
             steps {
                 sh 'mkdir DemoApp'
