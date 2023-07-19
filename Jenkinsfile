@@ -13,8 +13,10 @@ pipeline {
                 sh 'git clone https://github.com/pratyush-kr/DemoApp.git'
             }
         }
-        steps {
-        sh 'docker build -t DemoAp .'
-    }
+        stage('Docker build') {
+            steps {
+                sh 'docker build -t myapp .'
+            }
+        }
     }
 }
