@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Installing git') {
             steps {
-                sh 'sudo apt install git'
+                sh 'apt install git'
             }
         }
         stage('Checkout') {
