@@ -11,7 +11,7 @@ class UserView(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
-    # @action(methods=["GET"], detail=False)
-    # def get_user():
-    #     # users = User.objects.all()
-    #     return []
+    @action(methods=["GET"], detail=False)
+    def get_user():
+        # users = User.objects.all()
+        return []
