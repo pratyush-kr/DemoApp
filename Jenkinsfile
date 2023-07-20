@@ -15,6 +15,7 @@ pipeline {
         }
         stage('Docker build') {
             steps {
+                sh 'snap install docker'
                 sh 'docker build -t DempApp .'
             }
         }
