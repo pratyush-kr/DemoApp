@@ -17,12 +17,12 @@ pipeline {
                 sh 'git clone https://github.com/pratyush-kr/DemoApp.git'
             }
         }
-        // stage('Docker build') {
-        //     steps {
-        //         sh 'snap install docker'
-        //         sh 'docker build -t DempApp .'
-        //     }
-        // }
+        stage('Docker build') {
+            steps {
+                // sh 'snap install docker'
+                sh 'docker build -t DempApp .'
+            }
+        }
     }
 }
 
