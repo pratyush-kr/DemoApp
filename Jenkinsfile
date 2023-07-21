@@ -22,6 +22,11 @@ pipeline {
                 sh 'docker build -t demo-app .'
             }
         }
+        stage('Docker deploy') {
+            steps {
+                sh 'docker run -d -p 8000:8000 demo-app'
+            }
+        }
     }
 }
 
