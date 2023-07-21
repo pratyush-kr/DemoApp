@@ -19,7 +19,6 @@ pipeline {
         }
         stage('Docker build') {
             steps {
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials')
                 sh 'docker build -t DemoApp .'
             }
         }
