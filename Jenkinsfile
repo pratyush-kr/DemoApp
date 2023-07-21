@@ -19,8 +19,8 @@ pipeline {
         }
         stage('Docker build') {
             steps {
-                // sh 'snap install docker'
-                sh 'docker build -t DempApp .'
+                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials')
+                sh 'docker build -t DemoApp .'
             }
         }
     }
